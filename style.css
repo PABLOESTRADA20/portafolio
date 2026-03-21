@@ -42,15 +42,33 @@ h1 {
 article {
     background: var(--card-bg);
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     backdrop-filter: blur(5px);
     transition: transform 0.3s;
     border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
+
+article img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
 article:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
+
 
 a {
     color: white;
