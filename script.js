@@ -41,18 +41,24 @@ const observerOptions = { threshold: 0.2 };
     });
 
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
-  const hors = new Date().getHours();
+
+  const horaLocal = new Intl.DateTimeFormat('es-CL?',{
+    timeZone: 'America/Santiago',
+    hour: 'numeric',
+    hour12: false
+  }).format(new Date());
+
+  const hors = parseInt(horaLocal);
   let mensaje = "";
-  if (hors < 12) mensaje = "¡Buenos días!";
-  else if (hors < 18) mensaje = "¡Buenas tardes!";
-  else mensaje = "¡Buenas noches!";
+  if (hors >= 6 && hors < 12)      mensaje = "¡Buenos días!";
+  else if (hors >= 12 && hors < 20) mensaje = "¡Buenas tardes!";
+  else                              mensaje = "¡Buenas noches!";
+
   const h1inicio = document.querySelector('#inicio h1');
   h1inicio.textContent = `${mensaje} Bienvenido a mi Proyecto`;
-
 });
+
 
 
 
