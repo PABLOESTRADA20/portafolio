@@ -156,3 +156,41 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.tarjeta-proyecto{
+  background: var(--card-bg);
+  padding: 20 px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  width: 260px;  
+  margin: 10px;
+  box-sizing: border-box;
+
+}
+
+.tarjeta-proyecto:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.tarjeta-proyecto h3 {
+  color: #a29bfe;
+  margin: 0 0 8px;
+}
+
+.tarjeta-proyecto p {
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: white;
+}
+
+.tarjeta-proyecto span {
+  background: var(--primary-color);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
