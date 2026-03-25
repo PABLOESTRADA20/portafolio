@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const proyectos = [
   { id: 1, nombre: "Portafolio Web", descripcion: "Mi primera página personal con HTML y CSS.", tecnologia: "HTML / CSS" },
   { id: 2, nombre: "App del clima", descripcion: "Consulta el clima de cualquier ciudad.", tecnologia: "JavaScript" },
-  { id: 3, nombre: "To-Do List", descripcion: "Lista de tareas con localStorage.", tecnologia: "React" },
+  { id: 3, nombre: "gpb-industries", descripcion: "Lista de tareas .", tecnologia: "React / Angular" },
 ];
 
 function TarjetaProyecto({ nombre, descripcion, tecnologia }) {
