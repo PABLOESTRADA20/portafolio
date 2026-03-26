@@ -28,8 +28,8 @@ function App() {
   const saludo = h >= 6 && h < 12
     ? "¡Buenos días!"
     : h >= 12 && h < 20
-    ? "¡Buenas tardes!"
-    : "¡Buenas noches!";
+      ? "¡Buenas tardes!"
+      : "¡Buenas noches!";
 
   // Cambio de fondo — reemplaza tu script.js
   const [fondoActivo, setFondoActivo] = useState(false);
@@ -67,7 +67,7 @@ function App() {
 
   return (
     <>
-      {/* Navbar */}
+      <h1>proyectosdiv</h1>
       <header>
         <nav id="navbar">
           <ul>
@@ -83,14 +83,16 @@ function App() {
         </nav>
       </header>
 
-      {/* Introducción */}
-      <h1>proyectosdiv</h1>
+
       <h1>Introducción</h1>
-      <p id="introduccion">Esta página web es solo para experimentos en general</p>
+      <p id="introduccion">Esta página web está diseñada como un espacio dedicado a la experimentación y al aprendizaje continuo. En ella presento una colección de proyectos desarrollados con el objetivo de explorar distintas tecnologías, 
+        mejorar mis habilidades y poner en práctica ideas creativas.
+        Cada proyecto refleja un proceso de prueba, error y mejora constante, donde busco comprender mejor el funcionamiento de herramientas de desarrollo web, diseño e implementación de soluciones digitales. Este sitio no solo muestra resultados finales,
+        sino también el camino de aprendizaje detrás de cada uno.</p>
 
       <button onClick={cambiarFondo}>¡Haz clic aquí!</button>
 
-      {/* Inicio */}
+
       <section id="inicio">
         <h1>{saludo} Bienvenido a mi Proyecto</h1>
         <article>
