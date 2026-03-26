@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const proyectos = [
-  { id: 1, nombre: "Portafolio Web", descripcion: "Mi primera página personal con HTML y CSS.", tecnologia: "HTML / CSS" },
+  { id: 1, nombre: "Proyecto biodevercidad", descripcion: "Pagina hecha  con vite y react.", tecnologia: "react / nextjs" },
   { id: 2, nombre: "App del clima", descripcion: "Consulta el clima de cualquier ciudad.", tecnologia: "JavaScript" },
   { id: 3, nombre: "gpb-industries", descripcion: "Lista de tareas .", tecnologia: "React / Angular" },
 ];
