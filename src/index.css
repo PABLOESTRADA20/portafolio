@@ -1,16 +1,35 @@
-:root {
+:root [data-tema="oscuro"] {
     --primary-color: #6c5ce7;
     --bg-color: #0f0c29;
     --text-color: #ffffff;
     --card-bg: rgba(255, 255, 255, 0.1);
+    --navbar-bg: #000000;
+    --navbar-hover: #ff2e63;
+    --btn-bg: red;
+    --intro-border: rgb(245, 23, 23);
 }
+
+/*tema oscuro */
+[data-tema="claro"] {
+    --primary-color: #5a4fcf;
+    --bg-color: f0f0f8;
+    --text-color: 1a1a2e;
+    --card-bg: rgba(0, 0, 0, 0.06);
+    --navbar-bg: #1a1a2e;
+    --navbar-hover: #e0003c;
+    --btn-bg: #e0003c;
+    --intro-border: #e0003c;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     line-height: 1.6;
     scroll-behavior: smooth;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 h1 {
@@ -30,8 +49,8 @@ h1 {
     color: white;
     text-align: center;
     font-size: 20px;
-    font-family:fantasy;
-    border: 2px solid rgb(245, 23, 23);
+    font-family: fantasy;
+    border: 2px solid var(--intro-border);
     margin: 20px;
     padding: 20px;
     width: 50%;
@@ -45,7 +64,7 @@ article {
     border-radius: 10px;
     backdrop-filter: blur(5px);
     transition: transform 0.3s;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
 
     display: flex;
@@ -93,24 +112,28 @@ a {
     list-style: none;
     margin: 0;
     padding: 20px;
-    background-color: black;
-    justify-content: space-between; /* separa logo y links */
+    background-color: var(--navbar-bg);
+    justify-content: space-between;
+    /* separa logo y links */
 }
+
 .instagram {
     display: flex;
     align-items: center;
 }
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-color: var(--navbar-bg);
     margin: 20px 10px;
-    position: sticky; /* se queda fijo arriba */
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
+
 #navbar ul li a {
     text-decoration: none;
     color: white;
@@ -121,31 +144,36 @@ header {
 
 /* EFECTO HOVER */
 #navbar ul li a:hover {
-    background-color: #ff2e63;
+    background-color: var(--navbar-hover);
     border-radius: 8px;
 }
-.parafo-inicio{
+
+.parafo-inicio {
     color: white;
     text-align: center;
     font-size: 20px;
-    font-family:fantasy;
+    font-family: fantasy;
     margin: 20px;
 }
+
 #inicio {
     color: white;
     margin: 20px;
     padding: 30px;
 }
+
 .sobre {
     text-align: center;
     font-size: 20px;
     font-family: fantasy;
 }
+
 #sobre-mi {
     color: white;
     margin: 200px;
     padding: 30px;
 }
+
 button {
     display: block;
     margin: 0 auto;
@@ -157,40 +185,56 @@ button {
     cursor: pointer;
 }
 
-.tarjeta-proyecto{
-  background: var(--card-bg);
-  padding: 20 px;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
-  text-align: center;
-  width: 260px;  
-  margin: 10px;
-  box-sizing: border-box;
+.tarjeta-proyecto {
+    background: var(--card-bg);
+    padding: 20 px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 260px;
+    margin: 10px;
+    box-sizing: border-box;
 
 }
 
-.tarjeta-proyecto:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+.tarjeta-proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 .tarjeta-proyecto h3 {
-  color: #a29bfe;
-  margin: 0 0 8px;
+    color: #a29bfe;
+    margin: 0 0 8px;
 }
 
 .tarjeta-proyecto p {
-  font-size: 14px;
-  margin: 0 0 10px;
-  color: white;
+    font-size: 14px;
+    margin: 0 0 10px;
+    color: white;
 }
 
 .tarjeta-proyecto span {
-  background: var(--primary-color);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
+    background: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+.btn-tema {
+  background: transparent;
+  border: 1px solid white;
   color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.btn-tema:hover {
+  background: white;
+  color: black;
 }

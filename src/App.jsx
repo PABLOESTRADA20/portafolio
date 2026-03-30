@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import igLogo from "./assets/instagram.jpg";
+
 
 const proyectos = [
   { id: 1, nombre: "Proyecto biodevercidad", descripcion: "Pagina hecha  con vite y react.", tecnologia: "react / nextjs" },
@@ -41,6 +43,14 @@ function App() {
     setFondoActivo(true);
   }
 
+  const [tema, setTema] = useState("oscuro");
+
+  function toggleTema() {
+    const nuevoTema = tema === "oscuro" ? "claro" : "oscuro";
+    setTema(nuevoTema);
+    document.documentElement.setAttribute("data-tema", nuevoTema);
+  }
+
   // Animación de entrada — reemplaza el IntersectionObserver de script.js
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,6 +64,8 @@ function App() {
       },
       { threshold: 0.2 }
     );
+
+    document.documentElement.setAttribute("data-tema", "oscuro");
 
     document.querySelectorAll("section, article").forEach((el) => {
       el.style.opacity = "0";
@@ -76,8 +88,18 @@ function App() {
             <li><a href="#proyectos">Proyectos</a></li>
             <li className="instagram">
               <a href="https://www.instagram.com/young.crazy_69/" target="_blank" rel="noreferrer">
-                Instagram
+                <img
+                  src={igLogo}
+                  alt="Instagram"
+                  style={{ width: "28px", height: "28px", borderRadius: "6px", verticalAlign: "middle" }}
+                />
               </a>
+              <li>
+                <button onClick={toggleTema} className="btn-tema">
+                  {tema === "oscuro" ? "☀️ Claro" : "🌙 Oscuro"}
+                </button>
+              </li>
+
             </li>
           </ul>
         </nav>
@@ -85,7 +107,7 @@ function App() {
 
 
       <h1>Introducción</h1>
-      <p id="introduccion">Esta página web está diseñada como un espacio dedicado a la experimentación y al aprendizaje continuo. En ella presento una colección de proyectos desarrollados con el objetivo de explorar distintas tecnologías, 
+      <p id="introduccion">Esta página web está diseñada como un espacio dedicado a la experimentación y al aprendizaje continuo. En ella presento una colección de proyectos desarrollados con el objetivo de explorar distintas tecnologías,
         mejorar mis habilidades y poner en práctica ideas creativas.
         Cada proyecto refleja un proceso de prueba, error y mejora constante, donde busco comprender mejor el funcionamiento de herramientas de desarrollo web, diseño e implementación de soluciones digitales. Este sitio no solo muestra resultados finales,
         sino también el camino de aprendizaje detrás de cada uno.</p>
@@ -97,8 +119,10 @@ function App() {
         <h1>{saludo} Bienvenido a mi Proyecto</h1>
         <article>
           <p className="parafo-inicio">
-            Esta pagina mostrara mis proyectos futuros como tambien experimentos en general,
-            para crear proyectos futuros de frontend asi tambien impulsar esta pagina.
+            Esta página mostrará mis proyectos futuros, así como distintos experimentos en general,
+            enfocados en el desarrollo y la mejora continua dentro del área del frontend.
+            El objetivo de este espacio es servir como un entorno de práctica donde pueda explorar nuevas tecnologías,
+            probar ideas creativas y desarrollar soluciones innovadoras.
           </p>
         </article>
       </section>
@@ -108,9 +132,10 @@ function App() {
         <h1>Acerca de mi</h1>
         <article>
           <p className="sobre">
-            Mi nombre es Pablo Cocio, tengo 18 años, me gusta la música y el desarrollo web.
-            Mi objetivo es crear una plataforma donde pueda mostrar mis habilidades en el desarrollo web.
-            ¡Espero que disfrutes explorando mi página!
+            Mi nombre es Pablo Cocio, tengo 18 años y me apasiona tanto la música como el desarrollo web. Estas dos áreas representan una parte importante de mi vida,
+            ya que combinan creatividad, disciplina y aprendizaje constante.
+            Mi objetivo es crear una plataforma donde pueda mostrar mis habilidades en el desarrollo web, compartir mis proyectos y evidenciar mi crecimiento como desarrollador frontend.
+            A través de este espacio, busco experimentar, innovar y seguir mejorando en cada nuevo desafío que emprendo.
           </p>
         </article>
       </section>
