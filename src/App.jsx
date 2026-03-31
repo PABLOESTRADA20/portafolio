@@ -132,7 +132,7 @@ function App() {
         <h1>Acerca de mi</h1>
         <article>
           <p className="sobre">
-            Mi nombre es Pablo Cocio, tengo 18 años y me apasiona tanto la música como el desarrollo web. Estas dos áreas representan una parte importante de mi vida,
+            Mi nombre es Pablo Cocio, tengo 18 años y me apasiona el desarrollo web. Estas dos áreas representan una parte importante de mi vida,
             ya que combinan creatividad, disciplina y aprendizaje constante.
             Mi objetivo es crear una plataforma donde pueda mostrar mis habilidades en el desarrollo web, compartir mis proyectos y evidenciar mi crecimiento como desarrollador frontend.
             A través de este espacio, busco experimentar, innovar y seguir mejorando en cada nuevo desafío que emprendo.
